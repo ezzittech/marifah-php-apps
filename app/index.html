@@ -118,6 +118,13 @@ body { font-family: 'Tajawal', sans-serif; background: #1a0608; margin: 0; }
 .card-rose:hover       { box-shadow: 0 20px 45px rgba(180,30,55,.18); }
 .card-dark::before     { background: #1a0608; }
 .card-dark:hover       { box-shadow: 0 20px 45px rgba(26,6,8,.25); }
+.card-indigo::before   { background: #4f46e5; }
+.card-indigo:hover     { box-shadow: 0 20px 45px rgba(79,70,229,.18); }
+.card-amber::before    { background: #d97706; }
+.card-amber:hover      { box-shadow: 0 20px 45px rgba(217,119,6,.18); }
+.card-emerald::before  { background: #10b981; } /* لون جديد لبطاقة الرواتب */
+.card-emerald:hover    { box-shadow: 0 20px 45px rgba(16,185,129,.18); }
+
 
 .card-icon {
     width:56px; height:56px; border-radius:14px;
@@ -234,7 +241,7 @@ body { font-family: 'Tajawal', sans-serif; background: #1a0608; margin: 0; }
       <!-- الإحصائيات السريعة -->
       <div class="inline-flex flex-wrap justify-center gap-6 bg-white/05 border border-white/08 rounded-2xl px-8 py-5">
         <div class="text-center">
-          <p class="text-2xl font-extrabold text-white">4</p>
+          <p class="text-2xl font-extrabold text-white">7</p>
           <p class="text-xs text-white/40 mt-0.5">تقارير متاحة</p>
         </div>
         <div class="w-px bg-white/10 self-stretch"></div>
@@ -334,7 +341,6 @@ body { font-family: 'Tajawal', sans-serif; background: #1a0608; margin: 0; }
 
         <!-- ٤ — دفتر الأستاذ العام -->
         <a href="general_ledger.php" class="report-card card-burgundy">
-          <span class="badge-tag" style="background:linear-gradient(135deg,#3d0c14,#8b1a2a);color:rgba(255,255,255,.8);">جديد</span>
           <div class="card-icon" style="background:rgba(61,12,20,.1);color:#3d0c14;">
             <i class="fas fa-book"></i>
           </div>
@@ -348,6 +354,65 @@ body { font-family: 'Tajawal', sans-serif; background: #1a0608; margin: 0; }
             <span class="text-xs font-bold px-2.5 py-1 rounded-full" style="background:rgba(61,12,20,.08);color:#3d0c14;">طباعة مفصّلة</span>
           </div>
           <div class="card-arrow" style="color:#3d0c14;">
+            <span>فتح التقرير</span>
+            <i class="fas fa-arrow-left text-xs"></i>
+          </div>
+        </a>
+
+        <!-- ٥ — تقرير الكاش -->
+        <a href="albara_cash.php" class="report-card card-amber">
+          <div class="card-icon" style="background:rgba(217,119,6,.1);color:#d97706;">
+            <i class="fas fa-cash-register"></i>
+          </div>
+          <h2 class="text-xl font-extrabold text-gray-900 mb-2">تقرير الكاش</h2>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            متابعة دقيقة لحركات الكاش النقدية وتدفقات الصندوق مع إمكانية الفلترة وتتبع الإيرادات والمصروفات.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="text-xs font-bold px-2.5 py-1 rounded-full" style="background:rgba(217,119,6,.08);color:#d97706;">تدفقات نقدية</span>
+            <span class="text-xs font-bold px-2.5 py-1 rounded-full" style="background:rgba(217,119,6,.08);color:#d97706;">أرصدة لحظية</span>
+          </div>
+          <div class="card-arrow" style="color:#d97706;">
+            <span>فتح التقرير</span>
+            <i class="fas fa-arrow-left text-xs"></i>
+          </div>
+        </a>
+
+        <!-- ٦ — تقرير التخفيضات -->
+        <a href="discount_report.php" class="report-card card-indigo">
+          <div class="card-icon" style="background:rgba(79,70,229,.1);color:#4f46e5;">
+            <i class="fas fa-tags"></i>
+          </div>
+          <h2 class="text-xl font-extrabold text-gray-900 mb-2">تقرير التخفيضات</h2>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            لوحة تحليل شاملة للفواتير المخصومة ديناميكياً مع تصنيف أنواع التخفيضات (نسبة، حضوري، أون لاين).
+          </p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="text-xs font-bold px-2.5 py-1 rounded-full" style="background:rgba(79,70,229,.08);color:#4f46e5;">تحليل النسب</span>
+            <span class="text-xs font-bold px-2.5 py-1 rounded-full" style="background:rgba(79,70,229,.08);color:#4f46e5;">إحصائيات مجمعة</span>
+          </div>
+          <div class="card-arrow" style="color:#4f46e5;">
+            <span>فتح التقرير</span>
+            <i class="fas fa-arrow-left text-xs"></i>
+          </div>
+        </a>
+
+        <!-- ٧ — تقرير الرواتب (الجديد) -->
+        <a href="payroll_report.php" class="report-card card-emerald">
+          <span class="badge-tag" style="background:linear-gradient(135deg,#10b981,#059669);color:white;">جديد</span>
+          <div class="card-icon" style="background:rgba(16,185,129,.1);color:#10b981;">
+            <i class="fas fa-money-bill-wave"></i>
+          </div>
+          <h2 class="text-xl font-extrabold text-gray-900 mb-2">كشف الرواتب الشهري</h2>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            تقرير تفصيلي لرواتب الموظفين مقسم حسب الشركات والأقسام مع عرض الاستقطاعات والمساهمات والمجاميع.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="text-xs font-bold px-2.5 py-1 rounded-full" style="background:rgba(16,185,129,.08);color:#10b981;">حسب الشركة</span>
+            <span class="text-xs font-bold px-2.5 py-1 rounded-full" style="background:rgba(16,185,129,.08);color:#10b981;">تصدير Excel</span>
+            <span class="text-xs font-bold px-2.5 py-1 rounded-full" style="background:rgba(16,185,129,.08);color:#10b981;">مساهمات</span>
+          </div>
+          <div class="card-arrow" style="color:#10b981;">
             <span>فتح التقرير</span>
             <i class="fas fa-arrow-left text-xs"></i>
           </div>
