@@ -9,7 +9,7 @@ $username = 'ezzittech@gmail.com';
 $password = 'Abulez@2526';
 
 // ── JSON-RPC مع session cookie ─────────────────
-function<?php
+function
 // ══════════════════════════════════════════════
 //  كشف الرواتب الموحد — Marifah & Almunifi
 // ══════════════════════════════════════════════
